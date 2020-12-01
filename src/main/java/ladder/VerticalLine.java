@@ -2,23 +2,22 @@ package ladder;
 
 import ladder.ladderexceptions.IllegalHeightException;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class VerticalLine {
 
-    private final List<Joint> line;
+    private final List<Joint> joints;
 
     public VerticalLine(int height) {
+        Optional.of(height)
+                .filter(value -> value >= 1)
+                .orElseThrow(IllegalHeightException::new);
 
-        if (height < 1) {
-            throw new IllegalHeightException();
-        }
-
-        line = new ArrayList<>();
-
-        IntStream.range(0, height)
-                .mapToObj(x -> line.add(Joint.NO_HORIZONTAL));
+        joints = IntStream.range(0, height)
+                .mapToObj(x -> Joint.NO_HORIZONTAL)
+                .collect(Collectors.toList());
     }
 }
