@@ -17,7 +17,7 @@ public class VerticalLine {
                 .orElseThrow(IllegalHeightException::new);
 
         joints = IntStream.range(0, height)
-                .mapToObj(x -> Joint.NO_HORIZONTAL)
+                .mapToObj(x -> new Joint())
                 .collect(Collectors.toList());
     }
 }

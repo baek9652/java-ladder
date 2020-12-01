@@ -30,6 +30,8 @@
     * [X] height > 0
     * [ ] 가로 선 생성 조건 존재
 * Joint
+    * [ ] Joint 를 보유하며, 변경 요청이 들어왔을 때 Left,Right,NO_HORIZONTAL_LINE
+* JointStatus
     * [X] Enum 으로 Left, Right, NoHorizontalLine
 * Ladder
     * [ ] VerticalLine 의 묶음
