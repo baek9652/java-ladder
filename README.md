@@ -19,30 +19,22 @@
 * 규칙 6: 모든 엔티티를 작게 유지한다.
 
 ### 파생 요구사항(설계)
-* [ ] User
+* User
     * [X] 이름 길이는 최대 5자(이름에 대한 정상 포멧 검증)
-* [ ] Users
+* Users
     * [ ] 초기 위치(?)
     * [X] List<User>
-* [ ] RawInputParser
+* RawInputParser
     * [X] ,로 인풋 분리 기능 `String -> <List>String`
-* [ ] VerticalLine
+* VerticalLine
     * [X] height > 0
     * [ ] 가로 선 생성 조건 존재
-* [X] Enum 으로 Left, Right, NoHorizontalLine
-* [ ] Ladder
+* Joint
+    * [X] Enum 으로 Left, Right, NoHorizontalLine
+* Ladder
     * [ ] VerticalLine 의 묶음
         * [ ] Line 의 갯수는 User 수와 동일
     * [ ] 초기 위치 -> 최종 위치 계산
-* [ ] ResultView
-* [ ] InputView
-
-
-## 진행 방법
-* 사다리 게임 게임 요구사항을 파악한다.
-* 요구사항에 대한 구현을 완료한 후 자신의 github 아이디에 해당하는 브랜치에 Pull Request(이하 PR)를 통해 코드 리뷰 요청을 한다.
-* 코드 리뷰 피드백에 대한 개선 작업을 하고 다시 PUSH한다.
-* 모든 피드백을 완료하면 다음 단계를 도전하고 앞의 과정을 반복한다.
-
-## 온라인 코드 리뷰 과정
-* [텍스트와 이미지로 살펴보는 온라인 코드 리뷰 과정](https://github.com/nextstep-step/nextstep-docs/tree/master/codereview)
+* ResultView
+* InputView
+    * [X] 사용자 입력 파트
